@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Congresso de Jovens - IDE</title>
+    <link rel="stylesheet" href="./src/css/estilos.css">
+    <link rel="stylesheet" href="./src/css/responsivo.css">
+    <link rel="icon" href="./src/imagens/Logo Tabenaculo.png" type="imagem globo">
+    <style>
+        /* Estilos para o modal */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1;
+            padding-top: 60px;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgb(0,0,0);
+            background-color: rgba(0,0,0,0.9);
+        }
+
+        .modal-content {
+            margin: auto;
+            display: block;
+            width: 80%;
+            max-width: 700px;
+        }
+
+        .modal-content, .modal-content img {
+            animation-name: zoom;
+            animation-duration: 0.6s;
+        }
+
+        @keyframes zoom {
+            from {transform: scale(0)}
+            to {transform: scale(1)}
+        }
+
+        .close {
+            position: absolute;
+            top: 15px;
+            right: 35px;
+            color: #f1f1f1;
+            font-size: 40px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .close:hover,
+        .close:focus {
+            color: #bbb;
+            text-decoration: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <h1>IDE - Igreja Tabernáculo de Davi</h1>
+            <nav>
+                <button id="menu-toggle" class="menu-toggle">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </button>
+                <ul id="nav-menu">
+                    <li><a href="#inicio">Início</a></li>
+                    <li><a href="#pregadores">Pregadores</a></li>
+                    <li><a href="#informacoes">Informações</a></li>
+                    <li><a href="#atividades">Ajuda</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Menu de navegação móvel para telas menores -->
+    <nav class="mobile-menu">
+        <ul id="mobile-nav-menu">
+            <li><a href="#inicio">Início</a></li>
+            <li><a href="#pregadores">Pregadores</a></li>
+            <li><a href="#informacoes">Informações</a></li>
+            <li><a href="#atividades">Ajuda</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <!-- Seção Início -->
+        <section id="inicio" class="intro active">
+            <div class="intro-content">
+                <h2>Seja Bem-Vindo ao nosso site!!! Somos o Ministério Dois ou Mais</h2>
+                <p>Nosso congresso <span>IDE</span> vai acontecer dos dias <span>12 à 14 de julho,</span> por aqui você consegue se manter informado.</p>
+                <p><span>Confira nossas camisetas:</span> <br/>(Para mais informações, é só entrar em contato por um dos instagrans que estarão no final do site)</p>
+                <div class="images">
+                    <img src="./src/imagens/Camiseta masculina.jpg" alt="Camiseta do tema" class="zoomable">
+                    <img src="./src/imagens/camiseta masculina costas.jpg" alt="Camiseta do tema" class="zoomable">
+                </div>
+            </div>
+        </section>
+
+        <!-- Seção Pregadores -->
+        <section id="pregadores" class="speakers">
+            <h2>Pregadores Convidados</h2>
+            <p>Nesse congresso, iremos contar com a presença de dois convidados muito especiais. Fique a vontade para dar uma conferida:</p>
+            <div class="speaker-container">
+                <div class="speaker">
+                    <img src="./src/imagens/Pregador Luiz Ed..png" alt="Pregador 2" class="zoomable">
+                    <h3>Luiz Eduardo 12/07/2024 <br/><span>(Mevam Campinas - 20:00H)</span></h3>
+                </div>
+                <div class="speaker">
+                    <img src="./src/imagens/Pr. Rod. Medina.png" alt="Pregador 1" class="zoomable">
+                    <h3>Pr. Rodrigo Medina 13/07/2024<br/> <span>(Ministério Cumprir - 20:00H)</span></h3>
+                </div>
+                <!-- Adicione mais pregadores conforme necessário -->
+            </div>
+        </section>
+
+        <!-- Seção Informações -->
+        <section id="informacoes" class="information">
+            <h2>INSCREVA-SE</h2>
+            <p>Por aqui você consegue acessar nosso endereço e se inscrever para estar participando do congresso.<br/> Ficaremos muito felizes com a sua presença!🔥</p>
+            <div class="map">
+                <img src="./src/imagens/igreja.png" alt="Localização do evento" class="zoomable">
+                <p><a href="https://maps.app.goo.gl/PMWx32HPfrhS676AA" target="_blank">Clique aqui para acessar o endereço no Google Maps</a></p>
+            </div>
+            <div class="contact-form">
+                <h3>Faça sua Inscrição</h3>
+                <form action="https://formspree.io/f/xvgpowwk" method="POST">
+                    <label for="nome">Nome Completo:</label>
+                    <input type="text" id="nome" name="nome" required>
+                    <label for="telefone">Telefone:</label>
+                    <input type="tel" id="telefone" name="telefone" required>
+                    <label for="duvida">Mande sua Mensagem:</label>
+                    <textarea id="duvida" name="duvida" required></textarea>
+                    <button type="submit">Enviar</button>
+                </form>
+            </div>
+        </section>
+
+        <!-- Seção Atividades -->
+        <section id="atividades" class="activities">
+            <h2>Com quem me informar???</h2>
+            <p>Logo abaixo existem dois ícones com a logo da Igreja e do Ministério de Jovens<span>(referentes aos respectivos instagrans)</span>, como também um pequeno vídeo com os membros que compõem o Ministério de Jovens. Caso tenha alguma dúvida, sinta-se a vontade para perguntar pelas redes sociais, ou em caso de dúvida no local, é só procurar um dos integrantes do vídeo.<br/> <span>Estamos a sua disposição!</span> </p>
+            <video class="video" controls preload="metadata">
+                <source src="./src/video/apresentação.mp4" type="video/mp4">
+            </video>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Congresso de Jovens. Todos os direitos reservados.</p>
+        <div class="social-icons">
+            <a href="https://www.instagram.com/taberdavibarretos?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank" class="social-icons">
+                <img src="./src/imagens/Logo Tabenaculo.png" alt="Instagram Principal">
+            </a>
+            <a href="https://www.instagram.com/doisoumaiis?igsh=MWdjcjhmZWN3amZiNg==" target="_blank" class="social-icons">
+                <img src="./src/imagens/logo dois ou mais.png" alt="Instagram Jovens">
+            </a>
+        </div>
+    </footer>
+
+    <!-- Modal para ampliar imagens -->
+    <div id="imageModal" class="modal">
+        <span class="close">&times;</span>
+        <img class="modal-content" id="modalImage">
+    </div>
+    
+
+    <script src="./src/js/index.js"></script>
+
+</body>
+</html>
+

@@ -1,0 +1,451 @@
+body {
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../imagens/Imagem\ de\ Fundo.jpg') no-repeat center center fixed;
+    background-size: cover;
+    color: #ffffff;
+    position: relative;
+}
+
+.background-overlay {
+    position: fixed;                                                                                
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); 
+    z-index: -1; 
+}
+
+/* Cabeçalho */
+header {
+    background-color: rgba(32, 26, 25, 0.935);
+    padding: 0.8rem;
+    margin-bottom: 15px;
+    width: 100%;
+    z-index: 1000;
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    flex-grow: 1;
+}
+
+header h1 {
+    font-size: 1.5rem;
+    margin: 0;
+}
+
+nav ul {
+    list-style: none;
+    padding: 1;
+    margin: 0;
+    display: flex;
+    align-items: center;
+}
+
+nav ul li {
+    margin: 0 22px;
+}
+
+nav ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.menu-toggle .bar {
+    height: 3px;
+    width: 25px;
+    background-color: #d7ccc8;
+    margin: 4px 0;
+    border-radius: 2px;
+}
+
+/* Seções principais */
+main {
+    padding: 100px 1rem 1rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    background-color: rgba(0, 0, 0, 0.5); 
+    border-radius: 8px;
+}
+
+h2 {
+    color: rgba(227, 193, 158, 255);
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.intro-content, .information, .activities {
+    background-color: rgba(28, 28, 28, 0.8); 
+    padding: 2rem;
+    border-radius: 8px;
+    margin-bottom: 2rem;
+}
+
+.intro-content h2, .information h2, .activities h2 {
+    margin-top: 0;
+}
+
+.intro .intro-content {
+    text-align: center;
+}
+
+.intro .images {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px; /* Ajuste conforme necessário */
+}
+
+.intro .images img {
+    width: 250px; /* Ajuste conforme necessário */
+    height: auto;
+    margin: 0 10px;
+}
+
+.speakers {
+    text-align: center;
+    background-color: rgba(28, 28, 28, 0.8); 
+    padding: 2rem;
+    border-radius: 8px;
+    margin-bottom: 2rem;
+}
+
+.speakers .speaker-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.speakers .speaker {
+    text-align: center;
+    margin-bottom: 20px;
+    max-width: 200px; /* Ajuste conforme necessário */
+}
+
+.speakers .speaker img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.information {
+    text-align: center;
+}
+
+.map {
+    text-align: center;
+    margin-top: 1rem;
+}
+
+.map img {
+    width: 100%;
+    max-width: 500px;
+    border-radius: 8px;
+}
+
+.map a {
+    color: #ca8268;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.contact-form {
+    margin-top: 2rem;
+}
+
+.contact-form h3 {
+    margin-bottom: 1rem;
+    color: #d7ccc8;
+}
+
+.contact-form form {
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-form label {
+    margin-bottom: 0.5rem;
+    color: #d7ccc8;
+}
+
+.contact-form input,
+.contact-form textarea {
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+    border: 1px solid #d7ccc8;
+    border-radius: 4px;
+    background-color: #2c2c2c;
+    color: #ffffff;
+}
+
+.contact-form button {
+    padding: 0.75rem;
+    border: none;
+    border-radius: 4px;
+    background-color: #BB9469;
+    color: #3e2723;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.contact-form button:hover {
+    background-color: #a1887f;
+}
+
+/* Rodapé */
+footer {
+    text-align: center;
+    max-width: 100%;
+    padding: 1rem;
+    background-color: rgba(32, 26, 25, 0.935); 
+    max-width: 100%;
+    margin-top: 15px;
+}
+
+footer p {
+    margin: 0;
+}
+
+.social-icons {
+    margin-top: 0.5rem;
+}
+
+.social-icons a {
+    margin: 0 10px;
+    display: inline-block;
+}
+
+.social-icons img {
+    width: 55px;
+    height: 55px;
+}
+
+/* CSS */
+
+/* Seção Início */
+.intro .intro-content {
+    text-align: center;
+}
+
+.intro .images {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 20px; /* Ajuste conforme necessário */
+    gap: 20px;
+}
+
+.intro .images img {
+    width: 320px; /* Ajuste conforme necessário */
+    height: auto;
+    margin-bottom: 50px;
+}
+
+/* Seção Pregadores */
+.speakers {
+    text-align: center;
+    background-color: rgba(28, 28, 28, 0.8); 
+    padding: 2rem;
+    border-radius: 8px;
+    margin-bottom: 2rem;
+}
+
+.speakers .speaker-container {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    flex-wrap: wrap;
+    gap: 100px;
+}
+
+.speakers .speaker {
+    text-align: center;
+    margin-bottom: 20px;
+    max-width: 200px; /* Ajuste conforme necessário */
+}
+
+.speakers .speaker img {
+    width: 280px;
+    height: auto;
+    border-radius: 8px;
+}
+
+.information {
+    text-align: center;
+}
+
+/* Seção Informações */
+.information .map, .information .contact-form {
+    margin: 20px auto; /* Ajuste conforme necessário */
+    max-width: 450px; /* Ajuste conforme necessário */
+}
+
+.information .map img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.information .contact-form form {
+    margin-top: 20px; /* Ajuste conforme necessário */
+}
+
+.information .contact-form label,
+.information .contact-form input,
+.information .contact-form textarea{
+    width: 90%;
+    max-width: 90%;
+}
+
+.information .contact-form button {
+    width: 95%;
+    max-width: 95%;
+}
+
+/* Seção Atividades */
+.activities {
+    text-align: center;
+}
+
+.intro .images img,
+.speakers .speaker img,
+.information .map img {
+    scroll-behavior: auto;
+    transition: transform 0.3s ease; /* Adiciona uma transição suave ao efeito de zoom */
+}
+
+.intro .images img:hover,
+.speakers .speaker img:hover,
+.information .map img:hover {
+    transform: scale(1.1); 
+    cursor: pointer;
+}
+
+nav ul li a:hover {
+    background-color: #a1887f;
+    border-radius: 10px;
+    transition: 0.3s ease-in-out;
+    display: inline-block;
+    transform: scale(1.07); 
+}
+
+p {
+    font-size: 22px;
+}
+
+p span {
+    color: #ca8268;
+    font-weight: bold;
+}
+
+h3 {
+    font-size: 13.8px;
+    text-align: center;
+}
+h3 span {
+    color: #ca8268;
+    font-weight: bold;
+}
+
+/* Modal estilos */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    padding-top: 60px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.9);
+}
+
+.modal-content {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+}
+
+.modal-content, .modal-content img {
+    animation-name: zoom;
+    animation-duration: 0.6s;
+}
+
+@keyframes zoom {
+    from {transform: scale(0)}
+    to {transform: scale(1)}
+}
+
+.close {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.close:hover,
+.close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.intro-content span {
+    color: #ca8268;
+    font-weight: bold;
+}
+
+.mobile-menu {
+    display: none;
+    background-color: rgba(32, 26, 25, 0.888);
+    padding: 0.8rem;
+}
+
+.mobile-menu.active {
+    display: block;
+}
+
+.mobile-menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.mobile-menu li {
+    margin-bottom: 10px;
+}
+
+.mobile-menu a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: bold;
+    display: block;
+    padding: 10px 0;
+    border-bottom: 1px solid #d7ccc8;
+}
+
+.video {
+    cursor: pointer;
+    width: 50%;
+    height: auto;
+    border-radius: 8px;
+}
